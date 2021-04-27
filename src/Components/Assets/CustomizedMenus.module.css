@@ -1,0 +1,29 @@
+.container{
+  position: fixed;
+  /* padding: 20px;  */
+  /* /* margin-top: 20px; */
+  background: black;
+  border-radius: 100%;
+  margin: 10px 10px ;
+  
+
+}
+.icon__button{
+  /* position: fixed; */
+  background-color: blue;
+}
+.menu__button{
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+.logo__container{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+}
+.logo{
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+}
