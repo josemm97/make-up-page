@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const curso4Schema = new Schema({
-  curso: { type: String, default: 'Estilismo' },
+const curso6Schema = new Schema({
+  curso: { type: String, default: 'Colorista Capilar' },
   nombre: { type: String, required: true },
   apellidoPaterno: { type: String, required: true },
   apellidoMaterno: { type: String, required: true },
@@ -15,6 +15,6 @@ const curso4Schema = new Schema({
 
 });
 
-const Curso4 = mongoose.model('Curso4', curso4Schema);
+const Curso6 = mongoose.model('Curso6', curso6Schema);
 
-module.exports = Curso4;
+module.exports = Curso6;
