@@ -1,0 +1,81 @@
+.header{
+    background: url("/img/header-cursos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 181px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+.header__title{
+    color: white;
+    text-align: center;
+    font-style: normal;
+font-weight: bold;
+font-size: 75px;
+line-height: 147.7%;
+}
+.container{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.curso__container{
+    background: #FFF9F9;
+    box-shadow: 6px 6px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    width: 90%;
+    margin: 20px 0;
+}
+.curso__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.curso__title > h5{
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+}
+.curso__body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.curso__body > p{
+   /* color: yellow; */
+   width: 96%;
+   text-align: justify;
+   line-height: 1.6;
+   padding: 0 10px;
+}
+.curso__footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.curso__button{
+    /* background: rgba(0, 0, 0, 0.64); */
+    background: rgba(0, 0, 0, 0.64);
+    box-shadow: 6px 7px 8px rgba(0, 0, 0, 0.25);
+    border: 23px;
+    width: 60%;
+    height: 60px;
+    border-radius:25px ;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 147.7%;
+}
+.curso__button:active{
+    color: rgba(0, 0, 0, 0.64);
+    background:white;
+
+}

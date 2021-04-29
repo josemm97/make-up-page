@@ -1,0 +1,10 @@
+.button{
+    background: rgba(0, 0, 0, 0.64);
+    box-shadow: 6px 7px 8px rgba(0, 0, 0, 0.25);
+    height: 60px;
+    border-radius:20px ;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+}

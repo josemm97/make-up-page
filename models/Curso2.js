@@ -15,6 +15,5 @@ const curso2Schema = new Schema({
 
 });
 
-const Curso2 = mongoose.model('Curso2', curso2Schema);
-
-module.exports = Curso2;
+module.exports = mongoose.models.Curso2
+ || mongoose.model('Curso2', curso2Schema);

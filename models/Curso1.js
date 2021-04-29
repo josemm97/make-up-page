@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
@@ -15,6 +17,8 @@ const curso1Schema = new Schema({
 
 });
 
-const Curso1 = mongoose.model('Curso1', curso1Schema);
+// const Curso1 = mongoose.model('Curso1', curso1Schema);
+module.exports = mongoose.models.Curso1
+ || mongoose.model('Curso1', curso1Schema);
 
-module.exports = Curso1;
+// module.exports = Curso1;

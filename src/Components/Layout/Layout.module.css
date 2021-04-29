@@ -3,3 +3,39 @@
     display: flex;
     justify-content: flex-end;
 }
+.footer{
+    margin-top: 70px;
+    background: url('/img/footer.png');
+    /* height: 190px; */
+    background-size: cover;
+    display: flex;
+    /* flex-direction: column; */
+}
+.footer__container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* background-color: violet; */
+    width: 100%;
+    padding: 10px;
+}
+.footer__container__artile1{
+    /* background-color: yellow; */
+    display: flex;    
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*padding: 10px; */
+    width: 100%;
+}
+.footer__title{
+    /* color: yellow; */
+    text-align: center;
+    /* padding: 10px 10px; */
+}
+.footer__text{
+    /* color: teal; */
+    width: 180px;
+    text-align: justify;
+    padding: 10px;
+    
+}

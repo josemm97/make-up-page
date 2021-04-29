@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-case-declarations */
+/* eslint-disable no-undef */
 /* eslint-disable eol-last */
 import dbConnect from '../../../utils/dbConnect';
 import Curso1 from '../../../models/Curso1';
@@ -10,20 +13,35 @@ export default async (req, res) => {
   switch (method) {
     case 'GET':
       try {
-        const inscritos = await Curso1.find({});
-        res.status(200).json({ success: true, data: inscritos });
+        const cursos = await Curso1.find();
+        // .then((cursos) => res.json({ data: cursos }));
+        return res.status(200).json({ data: cursos });
       } catch (error) {
-        res.status(400).json({ success: false });
+        return res.status(500).json({ error });
       }
-      break;
     case 'POST':
       try {
-        const nuevoIngreso = await Curso1.create(req.body);
-        res.status(201).json({ success: true, data: nuevoIngreso });
+        const { nombre } = req.body;
+        const { apellidoPaterno } = req.body;
+        const { apellidoMaterno } = req.body;
+        const { edad } = req.body;
+        const { correo } = req.body;
+        const { telefono } = req.body;
+
+        const newCurso1 = Curso1({
+          nombre,
+          apellidoPaterno,
+          apellidoMaterno,
+          edad,
+          correo,
+          telefono,
+
+        });
+        const student = await newCurso1.save();
+        return res.status(200).json({ success: true, data: student });
       } catch (error) {
-        res.status(400).json({ success: false });
+        return res.status(500).json({ error });
       }
-      break;
     default:
   }
 };

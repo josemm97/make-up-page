@@ -1,0 +1,42 @@
+.container{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    /* background-color: coral; */
+    height: 100vh;
+}
+.phone{
+    background-color: yellow;
+}
+.error{
+    color: red;
+    font-size: 15px;
+}
+
+.react-tel-input {
+	/* font-size: 0.9rem !important; */
+    background-color: yellow;
+}
+
+.react-tel-input .form-control {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	height: 3.5rem !important;
+	position: relative;
+	letter-spacing: .01rem;
+	border-radius: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	width: 100% !important;
+	font-size: 0.9rem !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .buttons{
+      margin-top: 30px;
+      padding: 0;
+      /* background-color: teal; */
+  }
+ }
