@@ -32,7 +32,7 @@ import fetch from 'isomorphic-unfetch';
 // import Button from '../Assets/Button';
 import styles from './FormDialog.module.css';
 
-export default function FormDialog1(props) {
+export default function FormDialog2(props) {
   const [res, setRes] = React.useState(null);
   const [telefono, setTelefono] = React.useState();
   const [nombre, setNombre] = React.useState(null);
@@ -53,10 +53,11 @@ export default function FormDialog1(props) {
   React.useEffect(() => {
     setUrl(window.location.origin);
   });
+  console.log(url);
   const create = async (data) => {
     let response;
     try {
-      response = await fetch(`${url}/api/curso1`, {
+      response = await fetch(`${url}/api/curso2`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -117,7 +118,7 @@ export default function FormDialog1(props) {
         // onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">Curso estilismo y bienestar social</DialogTitle>
+        <DialogTitle id="responsive-dialog-title">Curso de Maquillista Profesional</DialogTitle>
         <DialogContent className={styles.container}>
           <DialogContentText>
             Ingresar los datos correspondientes para su previo registro

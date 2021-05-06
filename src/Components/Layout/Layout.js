@@ -18,7 +18,7 @@ function Layout({ children, title }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Grid container>
+      <Grid container className={styles.container}>
         <Grid item xs={12} className={styles.navbar}>
           <CustomizedMenus />
         </Grid>

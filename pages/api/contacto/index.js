@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable eol-last */
 import dbConnect from '../../../utils/dbConnect';
 import Contacto from '../../../models/Contacto';
@@ -10,20 +11,18 @@ export default async (req, res) => {
   switch (method) {
     case 'GET':
       try {
-        const inscritos = await Contacto.find({});
-        res.status(200).json({ success: true, data: inscritos });
+        const contacto = await Contacto.find({});
+        return res.status(200).json({ success: true, data: contacto });
       } catch (error) {
-        res.status(400).json({ success: false });
+        return res.status(400).json({ success: false });
       }
-      break;
     case 'POST':
       try {
-        const nuevoIngreso = await Contacto.create(req.body);
-        res.status(201).json({ success: true, data: nuevoIngreso });
+        const contacto = await Contacto.create(req.body);
+        return res.status(201).json({ success: true, data: contacto });
       } catch (error) {
-        res.status(400).json({ success: false });
+        return res.status(400).json({ success: false });
       }
-      break;
     default:
   }
 };

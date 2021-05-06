@@ -37,10 +37,6 @@ export default function FormDialog1(props) {
   const [telefono, setTelefono] = React.useState();
   const [nombre, setNombre] = React.useState(null);
   const { open, handleClose } = props;
-  const [apellidoPaterno, setApellidoPaterno] = React.useState(null);
-  const [apellidoMaterno, setApellidoMaterno] = React.useState(null);
-  // const [telefono, setTelefono] = React.useState(null);
-  const [error, setError] = React.useState(null);
   const [edad, setEdad] = React.useState(null);
   const [url, setUrl] = React.useState(null);
   const router = useRouter();
@@ -53,10 +49,11 @@ export default function FormDialog1(props) {
   React.useEffect(() => {
     setUrl(window.location.origin);
   });
+  console.log(url);
   const create = async (data) => {
     let response;
     try {
-      response = await fetch(`${url}/api/curso1`, {
+      response = await fetch(`${url}/api/curso3`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -117,7 +114,7 @@ export default function FormDialog1(props) {
         // onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">Curso estilismo y bienestar social</DialogTitle>
+        <DialogTitle id="responsive-dialog-title">Tecnico en Uñas</DialogTitle>
         <DialogContent className={styles.container}>
           <DialogContentText>
             Ingresar los datos correspondientes para su previo registro

@@ -1,3 +1,4 @@
+
 .navbar{
     /* position: fixed; */
     display: flex;
@@ -39,3 +40,20 @@
     padding: 10px;
     
 }
+@media only screen and (min-width: 900px) {
+    .container {
+        /* background-color: blue; */
+        /* margin:  0 auto; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .title{
+        font-size: 37px;
+        background-color: blueviolet;
+    }
+    .footer{
+        border-radius: 22px;
+    }
+  }

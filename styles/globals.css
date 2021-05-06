@@ -19,3 +19,11 @@ a {
   --title-mobile-card-size: 10px;
   --title-mobile-card-color: white;
 }
+
+@media only screen and (min-width: 900px) {
+  body {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}

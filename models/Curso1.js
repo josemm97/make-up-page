@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const curso1Schema = new Schema({
-  curso: { type: String, default: 'Peluqueria Profesional' },
+  curso: { type: String, default: 'Estilismo' },
   nombre: { type: String, required: true },
   apellidoPaterno: { type: String, required: true },
   apellidoMaterno: { type: String, required: true },

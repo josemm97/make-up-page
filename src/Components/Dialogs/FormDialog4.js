@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable react/jsx-props-no-multi-spaces */
 /* eslint-disable no-useless-escape */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -33,17 +34,10 @@ import fetch from 'isomorphic-unfetch';
 import styles from './FormDialog.module.css';
 
 export default function FormDialog1(props) {
-  const [res, setRes] = React.useState(null);
   const [telefono, setTelefono] = React.useState();
-  const [nombre, setNombre] = React.useState(null);
   const { open, handleClose } = props;
-  const [apellidoPaterno, setApellidoPaterno] = React.useState(null);
-  const [apellidoMaterno, setApellidoMaterno] = React.useState(null);
-  // const [telefono, setTelefono] = React.useState(null);
-  const [error, setError] = React.useState(null);
-  const [edad, setEdad] = React.useState(null);
+
   const [url, setUrl] = React.useState(null);
-  const router = useRouter();
 
   const {
     register, handleSubmit, reset, formState: { errors },
@@ -53,10 +47,12 @@ export default function FormDialog1(props) {
   React.useEffect(() => {
     setUrl(window.location.origin);
   });
+  console.log(url);
   const create = async (data) => {
     let response;
+
     try {
-      response = await fetch(`${url}/api/curso1`, {
+      response = await fetch(`${url}/api/curso4`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -64,7 +60,6 @@ export default function FormDialog1(props) {
         },
         body: JSON.stringify(data),
       });
-      await setRes(response);
     } catch (err) {
       console.log(err);
     }
@@ -117,20 +112,18 @@ export default function FormDialog1(props) {
         // onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">Curso estilismo y bienestar social</DialogTitle>
+        <DialogTitle id="responsive-dialog-title">Peluqueria Profesional</DialogTitle>
         <DialogContent className={styles.container}>
           <DialogContentText>
             Ingresar los datos correspondientes para su previo registro
           </DialogContentText>
           <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <TextField
-              onChange={(e) => setNombre(e.target.value)}
               autoFocus
               margin="dense"
               id="name"
               label="Nombre"
               type="text"
-              value={nombre}
               fullWidth
               variant="outlined"
               onKeyUp={onTextInputKeyUp}
@@ -178,7 +171,6 @@ export default function FormDialog1(props) {
               id="standard-number"
               label="Edad"
               type="number"
-              onChange={(e) => setEdad(e.target.value)}
               InputProps={{ inputProps: { maxLength: 2 } }}
               fullWidth
               variant="outlined"

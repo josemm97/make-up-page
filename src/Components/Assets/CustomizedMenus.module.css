@@ -21,9 +21,17 @@
   /* background-color: blue; */
   display: flex;
   justify-content: center;
+  border-radius: 100%;
 }
 .logo{
     width: 140px;
     height: 140px;
     cursor: pointer;
+    border-radius: 100%;
+    background: #ffffff;
+
+}
+.logo:hover{
+  box-shadow:  26px 26px 52px #ebebeb,
+             -26px -26px 52px #ffffff;
 }
