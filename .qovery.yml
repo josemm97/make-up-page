@@ -1,0 +1,15 @@
+---
+application:
+  name: "make-up-page"
+  project: "make-up"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "cursos"
+  version: "4.4"
+routers:
+- name: "main-make-up-page"
+  routes:
+  - application_name: "make-up-page"
+    paths:
+    - "/*"
